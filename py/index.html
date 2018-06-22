@@ -1,0 +1,296 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+
+        Home &middot;
+
+    </title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link href="../assets/css/toolkit.css" rel="stylesheet">
+
+    <link href="../assets/css/application.css" rel="stylesheet">
+
+    <style>
+      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+      /* this chunk of css is not part of the toolkit :) */
+      body {
+        width: 1px;
+        min-width: 100%;
+        *width: 100%;
+      }
+
+      @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #519fcc;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #3097D1;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #3097D1;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+
+    </style>
+
+  </head>
+
+
+<body class="with-top-navbar">
+
+
+
+<div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="msgModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+
+      <div class="modal-body p-0 js-modalBody">
+       <!-- <div class="modal-body-scroller"> -->
+          <!--  <div class="media-list media-list-users list-group js-msgGroup">-->
+            <div class="login-page">
+                <div class="form">
+                    <form class="register-form">
+                        <input type="text" placeholder="name"/>
+                        <input type="password" placeholder="password"/>
+                        <input type="text" placeholder="email address"/>
+                        <button>create</button>
+                        <p class="message">Already registered? <a href="../profile/index.html">Sign In</a></p>
+                    </form>
+                    <form class="login-form">
+                        <input type="text" placeholder="username"/>
+                        <input type="password" placeholder="password"/>
+                        <button formaction="../profile/index.html">login</button>
+                        <p class="message">Not registered? <a href="#">Create an account</a></p>
+                    </form>
+                </div>
+            </div>
+          <!--  </div>-->
+         <!-- </div>-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="growl" id="app-growl"></div>
+
+<nav class="navbar navbar-toggleable-sm fixed-top navbar-inverse bg-primary app-navbar">
+  <button
+    class="navbar-toggler navbar-toggler-right hidden-md-up"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarResponsive"
+    aria-controls="navbarResponsive"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand" href="../index.html">
+    <img src="../assets/img/brand.png" alt="brand">
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link"  href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../profile/index.html">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../contact/index.html">Contact</a>
+      </li>
+
+
+      <li class="nav-item hidden-md-up">
+        <a class="nav-link">Notifications</a><!-- href="../notifications/index.html"-->
+      </li>
+      <li class="nav-item hidden-md-up">
+        <a class="nav-link" data-action="growl">Growl</a>
+      </li>
+      <li class="nav-item hidden-md-up">
+        <a class="nav-link" href="../login/index.html">Logout</a>
+      </li>
+
+    </ul>
+
+    <form class="form-inline float-right hidden-sm-down">
+      <input class="form-control" type="text" data-action="grow" placeholder="Search">
+    </form>
+
+    <ul id="#js-popoverContent" class="nav navbar-nav float-right mr-0 hidden-sm-down">
+      <li class="nav-item">
+        <a class="app-notifications nav-link" href="../notifications/index.html">
+          <span class="icon icon-bell"></span>
+        </a>
+      </li>
+      <li class="nav-item ml-2">
+        <button class="btn btn-default navbar-btn navbar-btn-avatar" data-toggle="popover">
+          <img class="rounded-circle" src="../assets/img/avatar-dhg.png">
+        </button>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav hidden-xs-up" id="js-popoverContent">
+      <li class="nav-item"><a class="nav-link" href="#" data-action="growl">Growl</a></li>
+      <li class="nav-item"><a class="nav-link"  data-toggle="modal" href="#msgModal">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="profile-header" style="background-image: url(../assets/img/Blue-Wallpapers-7.jpg);">
+  <div class="container">
+    <div class="container-inner">
+      <img class="rounded-circle media-object" src="../assets/img/Rightarrow.png" style="height: 150px; width: 300px">
+      <h3 class="profile-header-user">AdSkipper</h3>
+      <p class="profile-header-bio">
+        Listen to what you wish for..
+      </p>
+    </div>
+  </div>
+
+  <nav class="profile-header-nav">
+    <ul class="nav nav-tabs justify-content-center">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../profile/index.html">Listen</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../contact/index.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="card-block" data-grid="images" style="background-color: #F5F5F5;">
+    <div class="media-body-text">Everyone loves tuning into their favorite songs on radio and listening to the billboard hits. We intend to provide the same experience by providing hassle free online live radio streaming with options to mute the advertisements or switch the channels based on personalized recommendation during advertisements. Everyone loves things personalized as per their preferences. The core system has a digital feed of multiple online radio stations. It continuously churns the audio data, to recognize songs, chatter (radio chat shows) and ads. This information is then sent to the user’s mobile app/webapp and the radio will channels will switch automatically to another radio channel which has a song being played based on the user’s genre preference. Also, the user can choose to automatically skip ads and chatter.
+    </div>
+</div>
+
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/tether.min.js"></script>
+    <script src="../assets/js/chart.js"></script>
+    <script src="../assets/js/toolkit.js"></script>
+    <script src="../assets/js/application.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js"></script>
+    <script>
+      // execute/clear BS loaders for docs
+      $(function(){
+        if (window.BS&&window.BS.loader&&window.BS.loader.length) {
+          while(BS.loader.length){(BS.loader.pop())()}
+        }
+      })
+
+     //  $(window).on('load',function(){
+       // $('#msgModal').modal('show');
+   // });
+
+    $(document).ready(function() {
+     if ($.cookie('pop') == null) {
+         $('#msgModal').modal('show');
+         $.cookie('pop', '1');
+     }
+ });
+    </script>
+  </body>
+</html>
+
